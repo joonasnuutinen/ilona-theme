@@ -633,10 +633,6 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  clear: both;
-  display: block;
-  float: left;
-  width: 100%;
   height: 64px;
   background: #b4cc04;
 }
@@ -645,6 +641,7 @@ a:hover, a:active {
   list-style: none;
   margin: 0;
   padding-left: 0;
+  clear: both;
 }
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -680,6 +677,17 @@ a:hover, a:active {
 .menu-toggle,
 .main-navigation.toggled ul {
   display: block;
+}
+
+.menu-toggle {
+  float: right;
+  color: white;
+  border: none;
+  background: transparent;
+  padding: 0;
+  margin: 14px 18px 0 0;
+  font-size: 36px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 37.5em) {
