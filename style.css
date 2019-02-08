@@ -858,9 +858,12 @@ a:hover, a:active {
 }
 
 .page-content,
-.entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
+}
+
+.entry-content {
+  margin: 0;
 }
 
 .page-links {
