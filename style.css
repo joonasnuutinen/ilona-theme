@@ -633,15 +633,20 @@ a:hover, a:active {
 ## Menus
 --------------------------------------------------------------*/
 .main-navigation {
-  height: 64px;
+  min-height: 64px;
   background: #b4cc04;
+}
+.main-navigation .menu {
+  clear: both;
+  background: #ffe900;
 }
 .main-navigation ul {
   display: none;
+  flex-direction: column;
+  align-items: center;
   list-style: none;
   margin: 0;
-  padding-left: 0;
-  clear: both;
+  padding: 0.5em 0;
 }
 .main-navigation ul ul {
   box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -666,26 +671,33 @@ a:hover, a:active {
   left: auto;
 }
 .main-navigation li {
-  float: left;
   position: relative;
+  padding: 0.5em 0;
 }
 .main-navigation a {
   display: block;
   text-decoration: none;
+  color: #585857;
+  text-transform: lowercase;
+  font-size: 1.4em;
 }
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
   display: block;
+}
+
+.main-navigation.toggled ul {
+  display: flex;
 }
 
 .menu-toggle {
   float: right;
+  height: 64px;
   color: white;
   border: none;
   background: transparent;
   padding: 0;
-  margin: 14px 18px 0 0;
+  margin-right: 18px;
   font-size: 36px;
   cursor: pointer;
 }

@@ -1,13 +1,19 @@
 .main-navigation {
-	height: 64px;
+	min-height: $height__main-navigation;
 	background: $color__background-navigation;
+
+	.menu {
+		clear: both;
+		background: $color__background-menu;
+	}
 
 	ul {
 		display: none;
+		flex-direction: column;
+		align-items: center;
 		list-style: none;
 		margin: 0;
-		padding-left: 0;
-		clear: both;
+		padding: $padding__menu-li-v 0;
 
 		ul {
 			box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
@@ -49,8 +55,8 @@
 	}
 
 	li {
-		float: left;
 		position: relative;
+		padding: $padding__menu-li-v 0;
 
 		&:hover > a,
 		&.focus > a {
@@ -60,6 +66,9 @@
 	a {
 		display: block;
 		text-decoration: none;
+		color: $color__text-menu;
+		text-transform: lowercase;
+		font-size: $font__size-h2;
 	}
 
 	.current_page_item > a,
@@ -70,18 +79,22 @@
 }
 
 /* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
+.menu-toggle {
 	display: block;
+}
+
+.main-navigation.toggled ul {
+	display: flex;
 }
 
 .menu-toggle {
 	float: right;
+	height: $height__main-navigation;
 	color: white;
 	border: none;
 	background: transparent;
 	padding: 0;
-	margin: 14px 18px 0 0;
+	margin-right: 18px;
 	font-size: 36px;
 	cursor: pointer;
 }
