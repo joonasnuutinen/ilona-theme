@@ -91,9 +91,14 @@
 	border: none;
 	background: transparent;
 	padding: 0;
-	margin-right: 18px;
 	font-size: 36px;
 	cursor: pointer;
+	width: $height__main-navigation;
+	height: $height__main-navigation;
+
+	&:focus {
+		outline-color: transparent;
+	}
 }
 
 @media screen and (min-width: 37.5em) {

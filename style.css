@@ -694,9 +694,13 @@ a:hover, a:active {
   border: none;
   background: transparent;
   padding: 0;
-  margin-right: 18px;
   font-size: 36px;
   cursor: pointer;
+  width: 64px;
+  height: 64px;
+}
+.menu-toggle:focus {
+  outline-color: transparent;
 }
 
 @media screen and (min-width: 37.5em) {
