@@ -3,12 +3,13 @@
 	background: $color__background-navigation;
 
 	.menu {
+		display: none;
 		clear: both;
 		background: $color__background-menu;
 	}
 
 	ul {
-		display: none;
+		display: flex;
 		flex-direction: column;
 		align-items: center;
 		list-style: none;
@@ -81,10 +82,6 @@
 /* Small menu. */
 .menu-toggle {
 	display: block;
-}
-
-.main-navigation.toggled ul {
-	display: flex;
 }
 
 .menu-toggle {
