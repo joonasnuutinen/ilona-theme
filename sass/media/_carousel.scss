@@ -1,0 +1,35 @@
+.carousel-indicators {
+    margin-bottom: 11px;
+
+    li {
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        border: 2px solid white;
+        opacity: 1;
+        background: transparent;
+    }
+
+    .active {
+        background: white;
+    }
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    align-items: flex-end;
+    padding-bottom: 8px;
+    opacity: 1;
+
+    &:hover {
+        opacity: 1;
+    }
+}
+
+.carousel-control-prev-icon {
+    background-image: url('media/left.svg');
+}
+
+.carousel-control-next-icon {
+    background-image: url('media/right.svg');
+}

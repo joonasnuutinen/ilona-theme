@@ -104,7 +104,7 @@
 
         carouselHtml: function() {
             return `
-                <div id="${this.id}" class="carousel slide" data-ride="carousel" style="height: ${this.maxHeight()}px;">
+                <div id="${this.id}" class="carousel slide" data-ride="carousel">
                     <ol class="carousel-indicators">
                         ${this.indicatorsHtml()}
                     </ol>
