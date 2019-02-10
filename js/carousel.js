@@ -1,5 +1,25 @@
 (function($) {
-    if ($('.ilona-slider').length !== 0) {
-        console.log('slider found');
-    }
+    
+    const Carousel = {
+
+        init: function($target) {
+            //console.log('Carousel.init()');
+
+            this.$gallery = $target;
+
+        }
+
+    };
+
+    (function carouselScript() {
+        const $gallery = $('.ilona-slider');
+    
+        if ($gallery.length === 0) {
+            return;
+        }
+
+        const carousel = Object.create(Carousel);
+        carousel.init();
+    })();
+
 })(jQuery);

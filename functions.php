@@ -120,6 +120,10 @@ add_action( 'widgets_init', 'ilona_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ilona_scripts() {
+	wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', array(), null );
+
+	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.7.1/css/all.css', array(), null );
+
 	wp_enqueue_style( 'ilona-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ilona-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), '20151215', true );
@@ -131,8 +135,42 @@ function ilona_scripts() {
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
+
+	wp_enqueue_script( 'popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js', array( 'jquery' ), null, true );
+	
+	wp_enqueue_script( 'bootstrap-js', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js', array( 'popper' ), null, true );
 }
 add_action( 'wp_enqueue_scripts', 'ilona_scripts' );
+
+// Add style attributes
+function add_style_attributes( $html, $handle ) {
+	$integrity = array(
+		'bootstrap-css' => 'sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS',
+		'fontawesome' => 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
+	);
+	
+	if ( array_key_exists( $handle, $integrity ) ) {
+		return str_replace( "media='all'", "media='all' integrity='$integrity[$handle]' crossorigin='anonymous'", $html );
+	}
+
+	return $html;
+}
+add_filter( 'style_loader_tag', 'add_style_attributes', 10, 2 );
+
+// Add script attributes
+function add_script_attributes( $html, $handle ) {
+	$integrity = array(
+		'popper' => 'sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut',
+		'bootstrap-js' => 'sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k',
+	);
+	
+	if ( array_key_exists( $handle, $integrity ) ) {
+		return str_replace( "src", "integrity='$integrity[$handle]' crossorigin='anonymous' src", $html );
+	}
+
+	return $html;
+}
+add_filter( 'script_loader_tag', 'add_script_attributes', 10, 2 );
 
 /**
  * Implement the Custom Header feature.
