@@ -16,6 +16,10 @@
             return this.$img.attr('alt');
         },
 
+        height: function() {
+            return this.$img.height();
+        },
+
         html: function(active) {
             return `
                 <div class="carousel-item${active ? ' active' : ''}">
@@ -53,6 +57,10 @@
 
         imgCount: function() {
             return this.images.length;
+        },
+
+        maxHeight: function() {
+            return this.images.map(img => img.height()).reduce((acc, cur) => cur > acc ? cur : acc);
         },
 
         indicatorsHtml: function() {
@@ -96,7 +104,7 @@
 
         carouselHtml: function() {
             return `
-                <div id="${this.id}" class="carousel slide" data-ride="carousel">
+                <div id="${this.id}" class="carousel slide" data-ride="carousel" style="height: ${this.maxHeight()}px;">
                     <ol class="carousel-indicators">
                         ${this.indicatorsHtml()}
                     </ol>
