@@ -386,14 +386,25 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: sans-serif;
-  font-size: 16px;
-  font-size: 1rem;
+  font-family: "Crimson Text", serif;
+  font-size: 17.6px;
+  font-size: 1.1rem;
   line-height: 1.5;
 }
 
 h1, h2, h3, h4, h5, h6 {
   clear: both;
+}
+
+h1 {
+  text-transform: lowercase;
+  border: 3px solid #ffe900;
+  color: #585857;
+  font-size: 1.7em;
+  font-weight: 600;
+  line-height: 0.8;
+  padding-top: 0.5em;
+  margin: 18px 0;
 }
 
 p {
@@ -617,10 +628,10 @@ a {
   color: royalblue;
 }
 a:visited {
-  color: purple;
+  color: royalblue;
 }
 a:hover, a:focus, a:active {
-  color: midnightblue;
+  color: royalblue;
 }
 a:focus {
   outline: thin dotted;
@@ -680,7 +691,8 @@ a:hover, a:active {
   text-decoration: none;
   color: #585857;
   text-transform: lowercase;
-  font-size: 1.4em;
+  font-size: 1.7em;
+  font-weight: 600;
 }
 /* Small menu. */
 .menu-toggle {
@@ -853,6 +865,17 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
+.page {
+  text-align: center;
+}
+.page h1 {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+.page p {
+  padding: 0 8px;
+}
+
 .updated:not(.published) {
   display: none;
 }
@@ -1018,6 +1041,14 @@ object {
 
 .carousel-control-next-icon {
   background-image: url("media/right.svg");
+}
+
+/*--------------------------------------------------------------
+# Social
+--------------------------------------------------------------*/
+.fa-facebook {
+  color: #4267b2 !important;
+  font-size: 50px;
 }
 
 /*# sourceMappingURL=style.css.map */

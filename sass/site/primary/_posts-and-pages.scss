@@ -7,6 +7,19 @@
 	margin: 0 0 1.5em;
 }
 
+.page {
+	text-align: center;
+
+	h1 {
+		margin-left: 30px;
+		margin-right: 30px;
+	}
+
+	p {
+		padding: 0 8px;
+	}
+}
+
 .updated:not(.published) {
 	display: none;
 }
