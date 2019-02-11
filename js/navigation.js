@@ -32,13 +32,18 @@
 	}
 
 	button.onclick = function() {
+		const $menuDiv = $(menuDiv);
+		const $icon = $(button).find('.fas');
+
 		if ( -1 !== container.className.indexOf( 'toggled' ) ) {
-			$(menuDiv).slideUp();
+			$menuDiv.slideUp();
+			$icon.removeClass('fa-times').addClass('fa-bars');
 			container.className = container.className.replace( ' toggled', '' );
 			button.setAttribute( 'aria-expanded', 'false' );
 			menu.setAttribute( 'aria-expanded', 'false' );
 		} else {
-			$(menuDiv).slideDown();
+			$menuDiv.slideDown();
+			$icon.removeClass('fa-bars').addClass('fa-times');
 			container.className += ' toggled';
 			button.setAttribute( 'aria-expanded', 'true' );
 			menu.setAttribute( 'aria-expanded', 'true' );
