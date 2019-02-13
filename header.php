@@ -53,6 +53,8 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
+
+		<?php ilona_circles(); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

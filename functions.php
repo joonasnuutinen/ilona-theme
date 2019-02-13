@@ -195,9 +195,14 @@ require get_template_directory() . '/inc/template-functions.php';
 require get_template_directory() . '/inc/customizer.php';
 
 /**
- * Customizer shortcodes.
+ * Custom shortcodes.
  */
 require get_template_directory() . '/inc/shortcodes.php';
+
+/**
+ * Circles
+ */
+require get_template_directory() . '/inc/circles.php';
 
 /**
  * Load Jetpack compatibility file.
