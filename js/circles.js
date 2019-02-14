@@ -2,15 +2,16 @@
 (function($) {
 
     const Circle = {
-        init: function(data) {
+        init: function(data, diameters) {
             this.colorCode = data[0];
             this.size = data[1];
             this.x = data[2];
             this.y = data[3];
+            this.diameters = diameters;
         },
 
         style: function() {
-            const diameters = [0, 17, 32, 48, 64];
+            const diameters = this.diameters;
             const diam = diameters[this.size];
 
             return `width: ${diam}px; height: ${diam}px; top: ${this.y}%; left: ${this.x}%`;
@@ -25,16 +26,16 @@
     };
 
     const Circles = {
-        init: function(data) {
-            this.setCircles(data);
+        init: function(data, diameters) {
+            this.setCircles(data, diameters);
         },
 
-        setCircles: function(data) {
+        setCircles: function(data, diameters) {
             this.circles = [];
             const self = this;
             data.forEach(d => {
                 const newCircle = Object.create(Circle);
-                newCircle.init(d);
+                newCircle.init(d, diameters);
                 self.circles.push(newCircle);
             });
         },
@@ -71,8 +72,25 @@
             [1, 3, 92, 64]
         ];
 
+        const diameters = [0, 17, 32, 48, 64];
+
+        const wideData = [
+            [1, 3, 11, 0], [2, 3, 25, 5], [2, 2, 33, 0], [1, 3, 88, 0],
+            [2, 3, 1, 16], [1, 3, 13, 14], [2, 3, 79, 16],
+            [2, 2, 29, 29], [1, 5, 36, 26], [1, 3, 62, 23], [2, 4, 69, 23], [1, 2, 85, 26], [2, 4, 94, 25],
+            
+            [2, 2, 8, 45], [2, 6, 22, 45], [2, 2, 64, 48], [1, 2, 78, 46], [1, 5, 84, 45],
+            [2, 2, 34, 56], [1, 2, 72, 52], [1, 3, 95, 56],
+            [2, 3, 16, 62],
+            [1, 3, 5, 72], [1, 2, 26, 77], [2, 3, 71, 75],
+            [2, 4, 13, 89]
+
+        ];
+
+        const wideDiameters = [0, 17, 32, 60, 86, 110, 136];
+
         const circles = Object.create(Circles);
-        circles.init(data);
+        circles.init(wideData, wideDiameters);
 
         $circles.html(circles.html());
 
