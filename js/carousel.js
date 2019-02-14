@@ -12,6 +12,14 @@
             return this.$img.attr('src');
         },
 
+        srcset: function() {
+            return this.$img.attr('srcset');
+        },
+
+        sizes: function() {
+            return this.$img.attr('sizes');
+        },
+
         alt: function() {
             return this.$img.attr('alt');
         },
@@ -23,7 +31,7 @@
         html: function(active) {
             return `
                 <div class="carousel-item${active ? ' active' : ''}">
-                    <img src="${this.src()}" class="d-block w-100" alt="${this.alt()}">
+                    <img src="${this.src()}" srcset="${this.srcset()}" sizes="${this.sizes()}" class="d-block w-100" alt="${this.alt()}">
                 </div>
             `;
         }
