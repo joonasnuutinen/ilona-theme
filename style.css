@@ -634,6 +634,20 @@ textarea {
   z-index: -1;
 }
 
+.ilona-circle {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.ilona-circle-1 {
+  background: #e3e89b;
+}
+
+.ilona-circle-2 {
+  background: #fff59b;
+}
+
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/

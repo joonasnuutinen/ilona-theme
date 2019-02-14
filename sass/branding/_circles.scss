@@ -6,3 +6,17 @@
     left: 0;
     z-index: -1;
 }
+
+.ilona-circle {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.ilona-circle-1 {
+    background: $color__background-circle-1;
+}
+
+.ilona-circle-2 {
+    background: $color__background-circle-2;
+}
