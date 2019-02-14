@@ -1,3 +1,7 @@
+.site-header {
+    position: relative;
+}
+
 .site-branding {
     text-align: center;
     line-height: 1;
@@ -7,3 +11,8 @@
     width: 75%;
     margin: 15px 0 12px;
 }
+
+/*--------------------------------------------------------------
+## Circles
+--------------------------------------------------------------*/
+@import "circles";
