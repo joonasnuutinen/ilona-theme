@@ -609,16 +609,18 @@ textarea {
 # Branding
 --------------------------------------------------------------*/
 .site-header {
-  position: relative;
+  overflow: hidden;
 }
 
 .site-branding {
+  position: relative;
   text-align: center;
   line-height: 1;
 }
 
 .custom-logo-link {
   width: 75%;
+  max-width: 360px;
   margin: 15px 0 12px;
 }
 

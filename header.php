@@ -42,6 +42,8 @@
 				?>
 				<p class="site-description"><?php echo $ilona_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
+
+			<?php ilona_circles(); ?>
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
@@ -53,8 +55,6 @@
 			) );
 			?>
 		</nav><!-- #site-navigation -->
-
-		<?php ilona_circles(); ?>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">
