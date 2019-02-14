@@ -785,6 +785,7 @@ a:hover, a:active {
   .main-navigation ul {
     flex-direction: row;
     justify-content: space-between;
+    padding: 17px 0 0;
   }
   .main-navigation li {
     padding: 0;
