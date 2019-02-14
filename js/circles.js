@@ -9,13 +9,8 @@
             this.y = data[3];
         },
 
-        asPercent(prop) {
-            return this[prop] * 100 + '%';
-        },
-
         style: function() {
-            const translate = `translate(${this.asPercent('x')}, ${this.asPercent('y')})`;
-            return `width: ${this.diameter}px; height: ${this.diameter}px; transform: ${translate};`;
+            return `width: ${this.diameter}px; height: ${this.diameter}px; top: ${this.y}%; left: ${this.x}%`;
         },
 
         html: function() {
@@ -57,7 +52,7 @@
         }
 
         const data = [
-            [1, 40, -0.9, 1.1]
+            [1, 40, 10, -5]
         ];
 
         const circles = Object.create(Circles);
