@@ -106,8 +106,8 @@
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation ul {
-		display: block;
+	.main-navigation .menu {
+		display: block!important;
 	}
 }
 
