@@ -4,13 +4,16 @@
     const Circle = {
         init: function(data) {
             this.colorCode = data[0];
-            this.diameter = data[1];
+            this.size = data[1];
             this.x = data[2];
             this.y = data[3];
         },
 
         style: function() {
-            return `width: ${this.diameter}px; height: ${this.diameter}px; top: ${this.y}%; left: ${this.x}%`;
+            const diameters = [0, 17, 32, 48, 64];
+            const diam = diameters[this.size];
+
+            return `width: ${diam}px; height: ${diam}px; top: ${this.y}%; left: ${this.x}%`;
         },
 
         html: function() {
@@ -52,7 +55,20 @@
         }
 
         const data = [
-            [1, 40, 10, -5]
+            [1, 2, 10, -3],
+            [1, 3, 77, -3],
+            [1, 1, 1, 11],
+            [2, 3, 19, 9],
+            [2, 2, 69, 14],
+            [2, 1, 83, 17],
+            [2, 4, 94, 18],
+            [1, 4, -4, 20],
+            [1, 2, 21, 26],
+            [1, 1, 96, 29],
+            [2, 2, 82, 31],
+            [1, 1, 18, 38],
+            [2, 4, 7, 47],
+            [1, 3, 92, 50]
         ];
 
         const circles = Object.create(Circles);
