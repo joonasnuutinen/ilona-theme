@@ -1083,7 +1083,7 @@ object {
 ## Carousel
 --------------------------------------------------------------*/
 .carousel-indicators {
-  margin-bottom: 11px;
+  margin-bottom: 21px;
 }
 .carousel-indicators li {
   width: 9px;
@@ -1100,12 +1100,18 @@ object {
 .carousel-control-next,
 .carousel-control-prev {
   align-items: flex-end;
-  padding-bottom: 8px;
-  opacity: 1;
+  padding: 8px;
+  width: auto;
 }
-.carousel-control-next:hover,
+.carousel-control-next, .carousel-control-next:hover,
+.carousel-control-prev,
 .carousel-control-prev:hover {
   opacity: 1;
+}
+.carousel-control-next-icon,
+.carousel-control-prev-icon {
+  width: 40px;
+  height: 40px;
 }
 
 .carousel-control-prev-icon {
@@ -1116,6 +1122,23 @@ object {
   background-image: url("media/right.svg");
 }
 
+@media screen and (min-width: 440px) {
+  .carousel-indicators {
+    margin-bottom: 35px;
+  }
+  .carousel-indicators li {
+    width: 23px;
+    height: 23px;
+    border-width: 3px;
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .carousel-control-next,
+.carousel-control-prev {
+    padding: 30px;
+  }
+}
 /*--------------------------------------------------------------
 # Social
 --------------------------------------------------------------*/

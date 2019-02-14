@@ -1,5 +1,5 @@
 .carousel-indicators {
-    margin-bottom: 11px;
+    margin-bottom: 21px;
 
     li {
         width: 9px;
@@ -18,11 +18,18 @@
 .carousel-control-next,
 .carousel-control-prev {
     align-items: flex-end;
-    padding-bottom: 8px;
-    opacity: 1;
+    padding: 8px;
+    width: auto;
 
+    &,
     &:hover {
         opacity: 1;
+    }
+
+    &-icon {
+        $size: 40px;
+        width: $size;
+        height: $size;
     }
 }
 
@@ -32,4 +39,25 @@
 
 .carousel-control-next-icon {
     background-image: url('media/right.svg');
+}
+
+@media screen and (min-width: $breakpoint__small-nav) {
+    .carousel-indicators {
+        margin-bottom: 35px;
+        
+        li {
+            $size: 23px;
+            $margin: 5px;
+            width: $size;
+            height: $size;
+            border-width: 3px;
+            margin-left: $margin;
+            margin-right: $margin;
+        }
+    }
+    
+    .carousel-control-next,
+    .carousel-control-prev {
+        padding: 30px;
+    }
 }
