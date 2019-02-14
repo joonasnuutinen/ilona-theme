@@ -752,11 +752,11 @@ a:hover, a:active {
     display: none;
   }
 
-  .main-navigation {
-    padding: 0 16px;
-  }
   .main-navigation .menu {
     display: block !important;
+    margin: 0 auto;
+    padding: 0 16px;
+    max-width: 720px;
     background: transparent;
   }
   .main-navigation ul {
@@ -912,14 +912,16 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
-.page {
+.site-main {
+  margin: 0 auto;
+  max-width: 1200px;
   text-align: center;
 }
-.page h1 {
+.site-main h1 {
   margin-left: 30px;
   margin-right: 30px;
 }
-.page p {
+.site-main p {
   padding: 0 8px;
 }
 

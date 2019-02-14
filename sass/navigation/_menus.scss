@@ -107,10 +107,12 @@
 		display: none;
 	}
 	.main-navigation {
-		padding: 0 16px;
 
 		.menu {
 			display: block!important;
+			margin: 0 auto;
+			padding: 0 16px;
+			max-width: 720px;
 			background: transparent;
 		}
 

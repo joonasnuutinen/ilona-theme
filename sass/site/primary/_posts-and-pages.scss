@@ -7,7 +7,9 @@
 	margin: 0 0 1.5em;
 }
 
-.page {
+.site-main {
+	margin: 0 auto;
+	max-width: $max-width__content;
 	text-align: center;
 
 	h1 {
