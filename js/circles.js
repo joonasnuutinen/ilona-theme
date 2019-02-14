@@ -26,8 +26,9 @@
     };
 
     const Circles = {
-        init: function(data, diameters) {
+        init: function(data, diameters, className) {
             this.setCircles(data, diameters);
+            this.className = className;
         },
 
         setCircles: function(data, diameters) {
@@ -41,7 +42,11 @@
         },
 
         html: function() {
-            return this.circles.map(c => c.html()).join('');
+            return `
+                <div class="ilona-circles__container ilona-circles__container--${this.className}">
+                    ${this.circles.map(c => c.html()).join('')}
+                </div>
+            `;
         }
 
     };
@@ -55,7 +60,7 @@
             return;
         }
 
-        const data = [
+        const narrowData = [
             [1, 2, 10, -4],
             [1, 3, 77, -4],
             [1, 1, 1, 14],
@@ -72,27 +77,32 @@
             [1, 3, 92, 64]
         ];
 
-        const diameters = [0, 17, 32, 48, 64];
+        const narrowDiameters = [0, 17, 32, 48, 64];
 
         const wideData = [
             [1, 3, 11, 0], [2, 3, 25, 5], [2, 2, 33, 0], [1, 3, 88, 0],
             [2, 3, 1, 16], [1, 3, 13, 14], [2, 3, 79, 16],
             [2, 2, 29, 29], [1, 5, 36, 26], [1, 3, 62, 23], [2, 4, 69, 23], [1, 2, 85, 26], [2, 4, 94, 25],
-            
             [2, 2, 8, 45], [2, 6, 22, 45], [2, 2, 64, 48], [1, 2, 78, 46], [1, 5, 84, 45],
             [2, 2, 34, 56], [1, 2, 72, 52], [1, 3, 95, 56],
             [2, 3, 16, 62],
             [1, 3, 5, 72], [1, 2, 26, 77], [2, 3, 71, 75],
-            [2, 4, 13, 89]
+            [2, 4, 13, 89], [1, 3, 78, 81], [1, 2, 93, 81],
+            [2, 5, 87, 99],
+            [2, 2, 18, 108]
 
         ];
 
         const wideDiameters = [0, 17, 32, 60, 86, 110, 136];
 
-        const circles = Object.create(Circles);
-        circles.init(wideData, wideDiameters);
+        const wideCircles = Object.create(Circles);
+        wideCircles.init(wideData, wideDiameters, 'wide');
 
-        $circles.html(circles.html());
+        const narrowCircles = Object.create(Circles);
+        narrowCircles.init(narrowData, narrowDiameters, 'narrow');
+
+        $circles.append(wideCircles.html());
+        $circles.append(narrowCircles.html());
 
     })();
 })(jQuery);

@@ -630,10 +630,24 @@ textarea {
 --------------------------------------------------------------*/
 .ilona-circles {
   position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+}
+.ilona-circles__container {
+  position: absolute;
   top: 0;
-  right: 0;
   bottom: 0;
+}
+.ilona-circles__container--narrow {
   left: 0;
+  right: 0;
+}
+.ilona-circles__container--wide {
+  display: none;
+  width: 1280px;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .ilona-circle {
@@ -651,6 +665,14 @@ textarea {
   background: #fff59b;
 }
 
+@media screen and (min-width: 440px) {
+  .ilona-circles__container--narrow {
+    display: none;
+  }
+  .ilona-circles__container--wide {
+    display: block;
+  }
+}
 /*--------------------------------------------------------------
 # Navigation
 --------------------------------------------------------------*/

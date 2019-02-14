@@ -1,9 +1,26 @@
 .ilona-circles {
     position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    
+    &__container {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+    
+        &--narrow {
+            left: 0;
+            right: 0;
+        }
+    
+        &--wide {
+            display: none;
+            width: 1280px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+    }
 }
 
 .ilona-circle {
@@ -19,4 +36,16 @@
 
 .ilona-circle-2 {
     background: $color__background-circle-2;
+}
+
+@media screen and (min-width: $breakpoint__small-nav) {
+    .ilona-circles__container {
+        &--narrow {
+            display: none;
+        }
+
+        &--wide {
+            display: block;
+        }
+    }
 }

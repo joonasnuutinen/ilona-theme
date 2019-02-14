@@ -27,6 +27,7 @@
 	<header id="masthead" class="site-header">
 		<div class="site-branding">
 			<?php
+			ilona_circles();
 			the_custom_logo();
 			if ( is_front_page() && is_home() ) :
 				?>
@@ -43,7 +44,7 @@
 				<p class="site-description"><?php echo $ilona_description; /* WPCS: xss ok. */ ?></p>
 			<?php endif; ?>
 
-			<?php ilona_circles(); ?>
+			
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
