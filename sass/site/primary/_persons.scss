@@ -1,3 +1,9 @@
 .ilona-person {
-    margin-bottom: 1em;
+    margin: 2em auto;
+    max-width: 600px;
+
+    .wp-block-media-text__media {
+        max-width: 300px;
+        margin: 0 auto;
+    }
 }

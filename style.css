@@ -953,7 +953,7 @@ a:hover, a:active {
 }
 .site-main p,
 .site-main iframe,
-.site-main div {
+.site-main .wp-block-media-text {
   padding: 0 8px;
 }
 
@@ -979,7 +979,12 @@ a:hover, a:active {
 ## Persons
 --------------------------------------------------------------*/
 .ilona-person {
-  margin-bottom: 1em;
+  margin: 2em auto;
+  max-width: 600px;
+}
+.ilona-person .wp-block-media-text__media {
+  max-width: 300px;
+  margin: 0 auto;
 }
 
 /*--------------------------------------------------------------
