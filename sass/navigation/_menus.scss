@@ -102,12 +102,31 @@
 	}
 }
 
-@media screen and (min-width: 37.5em) {
+@media screen and (min-width: 440px) {
 	.menu-toggle {
 		display: none;
 	}
-	.main-navigation .menu {
-		display: block!important;
+	.main-navigation {
+		padding: 0 16px;
+
+		.menu {
+			display: block!important;
+			background: transparent;
+		}
+
+		ul {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		li {
+			padding: 0;
+		}
+
+		a {
+			color: white;
+			font-weight: 400;
+		}
 	}
 }
 
