@@ -3,13 +3,21 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-	display: inline-block;
 	text-transform: lowercase;
 	border: 3px solid $color__border-title;
 	color: $color__text-title;
 	font-size: $font__size-h2;
 	font-weight: $font__weight-title;
 	line-height: .8;
-	padding: .5em 3em 0;
 	margin: 18px 0;
+	padding-top: .5em;
+}
+
+@media screen and (min-width: $breakpoint__small-nav) {
+	h1 {
+		$p: 3em;
+		display: inline-block;
+		padding-left: $p;
+		padding-right: $p;
+	}
 }
