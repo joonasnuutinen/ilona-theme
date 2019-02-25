@@ -126,7 +126,7 @@ function ilona_scripts() {
 
 	wp_enqueue_style( 'crimson-text', 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i', array(), null );
 
-	wp_enqueue_style( 'ilona-style', get_stylesheet_uri(), array(),  );
+	wp_enqueue_style( 'ilona-style', get_stylesheet_uri() );
 
 	wp_enqueue_script( 'ilona-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), false, true );
 
