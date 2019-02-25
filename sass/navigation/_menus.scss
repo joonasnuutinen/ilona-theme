@@ -125,6 +125,17 @@
 
 		li {
 			padding: 0;
+
+			/* Adjust middle element so that it is centered */
+			&:nth-child(2) {
+				margin-left: 29px;
+			}
+
+			/* Adjust first element to compensate for previous adjustment */
+			&:first-child a {
+				letter-spacing: 0.04em;
+				margin-left: 2px;
+			}
 		}
 
 		a {

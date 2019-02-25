@@ -400,7 +400,7 @@ h1, h2, h3 {
   text-transform: lowercase;
   border: 3px solid transparent;
   color: #585857;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
   margin: 18px 0;
   padding: 0.2em 0 0.1em;
@@ -775,7 +775,7 @@ a:hover, a:active {
   text-decoration: none;
   color: #585857;
   text-transform: lowercase;
-  font-size: 1.5em;
+  font-size: 1.5rem;
   font-weight: 600;
   letter-spacing: 0.02em;
 }
@@ -819,6 +819,15 @@ a:hover, a:active {
   }
   .main-navigation li {
     padding: 0;
+    /* Adjust middle element so that it is centered */
+    /* Adjust first element to compensate for previous adjustment */
+  }
+  .main-navigation li:nth-child(2) {
+    margin-left: 29px;
+  }
+  .main-navigation li:first-child a {
+    letter-spacing: 0.04em;
+    margin-left: 2px;
   }
   .main-navigation a {
     color: white;
