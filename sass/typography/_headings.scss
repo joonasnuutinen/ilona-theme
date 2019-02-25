@@ -9,8 +9,12 @@ h1, h2, h3 {
 	font-size: $font__size-h2;
 	font-weight: $font__weight-title;
 	margin: 18px 0;
-	padding-top: .3em;
+	padding: .2em 0 .1em;
 	line-height: 1;
+	letter-spacing: $letter-spacing__title;
+	max-width: 260px;
+	width: 100%;
+	display: inline-block;
 }
 
 h1 {
@@ -30,13 +34,4 @@ h4 {
 	font-size: 1.1em;
 	font-weight: bold;
 	margin: .5em 0;
-}
-
-@media screen and (min-width: $breakpoint__small-nav) {
-	h1, h2, h3 {
-		$p: 3em;
-		display: inline-block;
-		padding-left: $p;
-		padding-right: $p;
-	}
 }
