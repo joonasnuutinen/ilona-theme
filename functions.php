@@ -120,21 +120,23 @@ add_action( 'widgets_init', 'ilona_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ilona_scripts() {
+	$v = '20190225-0';
+
 	wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', array(), null );
 
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.7.1/css/all.css', array(), null );
 
 	wp_enqueue_style( 'crimson-text', 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i', array(), null );
 
-	wp_enqueue_style( 'ilona-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'ilona-style', get_stylesheet_uri(), array(), $v );
 
-	wp_enqueue_script( 'ilona-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'ilona-navigation', get_template_directory_uri() . '/js/navigation.js', array( 'jquery' ), $v, true );
 
 	wp_enqueue_script( 'ilona-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'ilona-carousel', get_template_directory_uri() . '/js/carousel.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'ilona-carousel', get_template_directory_uri() . '/js/carousel.js', array( 'jquery' ), $v, true );
 
-	wp_enqueue_script( 'ilona-circles', get_template_directory_uri() . '/js/circles.js', array( 'jquery' ), false, true );
+	wp_enqueue_script( 'ilona-circles', get_template_directory_uri() . '/js/circles.js', array( 'jquery' ), $v, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
