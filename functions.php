@@ -120,7 +120,7 @@ add_action( 'widgets_init', 'ilona_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ilona_scripts() {
-	$v = '20190225-0';
+	$v = '20190305-0';
 
 	wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', array(), null );
 
