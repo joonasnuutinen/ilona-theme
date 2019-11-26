@@ -691,7 +691,7 @@ textarea {
   background: #fff59b;
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 520px) {
   .ilona-circles__container--narrow {
     display: none;
   }
@@ -797,7 +797,7 @@ a:hover, a:active {
   outline-color: transparent;
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 520px) {
   .menu-toggle {
     display: none;
   }
@@ -1168,7 +1168,7 @@ object {
   background-image: url("media/right.svg");
 }
 
-@media screen and (min-width: 440px) {
+@media screen and (min-width: 520px) {
   .carousel-indicators {
     margin-bottom: 35px;
   }
