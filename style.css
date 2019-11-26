@@ -728,7 +728,7 @@ a:hover, a:active {
   min-height: 64px;
   background: #b4cc04;
 }
-.main-navigation .menu {
+.main-navigation > div {
   display: none;
   clear: both;
   background: #ffe900;
@@ -802,7 +802,7 @@ a:hover, a:active {
     display: none;
   }
 
-  .main-navigation .menu {
+  .main-navigation > div {
     display: block !important;
     margin: 0 auto;
     padding: 0 16px;
@@ -820,11 +820,11 @@ a:hover, a:active {
     /* Adjust first element to compensate for previous adjustment */
   }
   .main-navigation li:nth-child(2) {
-    margin-left: 29px;
+    /*margin-left: 29px;*/
   }
   .main-navigation li:first-child a {
-    letter-spacing: 0.04em;
-    margin-left: 2px;
+    /*letter-spacing: 0.04em;
+    margin-left: 2px;*/
   }
   .main-navigation a {
     color: white;

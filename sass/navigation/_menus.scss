@@ -2,7 +2,7 @@
 	min-height: $height__main-navigation;
 	background: $color__background-navigation;
 
-	.menu {
+	& > div {
 		display: none;
 		clear: both;
 		background: $color__background-menu;
@@ -109,7 +109,7 @@
 	}
 	.main-navigation {
 
-		.menu {
+		& > div {
 			display: block!important;
 			margin: 0 auto;
 			padding: 0 16px;
@@ -128,13 +128,13 @@
 
 			/* Adjust middle element so that it is centered */
 			&:nth-child(2) {
-				margin-left: 29px;
+				/*margin-left: 29px;*/
 			}
 
 			/* Adjust first element to compensate for previous adjustment */
 			&:first-child a {
-				letter-spacing: 0.04em;
-				margin-left: 2px;
+				/*letter-spacing: 0.04em;
+				margin-left: 2px;*/
 			}
 		}
 
