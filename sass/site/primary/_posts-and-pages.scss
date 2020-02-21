@@ -36,8 +36,10 @@
 .entry-content {
 	margin: 0;
 
-	& > p:first-of-type,
-	& > h2:first-of-type {
+	& > p:first-child,
+	& > h2:first-child,
+	.carousel + p,
+	.carousel + h2 {
 		margin-top: 2em;
 	}
 }

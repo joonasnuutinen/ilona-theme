@@ -1017,7 +1017,9 @@ a:hover, a:active {
 .entry-content {
   margin: 0;
 }
-.entry-content > p:first-of-type, .entry-content > h2:first-of-type {
+.entry-content > p:first-child, .entry-content > h2:first-child,
+.entry-content .carousel + p,
+.entry-content .carousel + h2 {
   margin-top: 2em;
 }
 
