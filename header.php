@@ -48,6 +48,7 @@
 		</div><!-- .site-branding -->
 
 		<nav id="site-navigation" class="main-navigation">
+			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><i class="fas fa-bars"></i></button>
 			<?php
 			wp_nav_menu( array(

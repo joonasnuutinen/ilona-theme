@@ -11,8 +11,8 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<?php
-	$hide_title = get_post_meta( get_the_ID(), 'ilona_hide_title', true );
-	if ( $hide_title != 'true' ) : ?>
+	$show_title = get_post_meta( get_the_ID(), 'ilona_show_title', true );
+	if ( $show_title == 'true' ) : ?>
 		<header class="entry-header">
 			<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 		</header><!-- .entry-header -->
