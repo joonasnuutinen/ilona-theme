@@ -35,6 +35,11 @@
 
 .entry-content {
 	margin: 0;
+
+	& > p:first-of-type,
+	& > h2:first-of-type {
+		margin-top: 2em;
+	}
 }
 
 .page-links {
