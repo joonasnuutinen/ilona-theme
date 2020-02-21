@@ -1018,14 +1018,11 @@ a:hover, a:active {
   margin: 0 auto;
 }
 
-.info-box {
+ul.info-box {
+  list-style-type: none;
   padding-top: 0.5em;
   padding-bottom: 0.5em;
   background: #e3e89b;
-}
-
-ul.info-box {
-  list-style-type: none;
 }
 ul.info-box li {
   padding: 0.5em 0;

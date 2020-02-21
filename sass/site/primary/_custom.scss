@@ -8,14 +8,11 @@
     }
 }
 
-.info-box {
+ul.info-box {
+    list-style-type: none;
     padding-top: .5em;
     padding-bottom: .5em;
     background: $color__background-info-box;
-}
-
-ul.info-box {
-    list-style-type: none;
 
     li {
         padding: .5em 0;
