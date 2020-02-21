@@ -1,0 +1,23 @@
+.ilona-person {
+    margin: 2em auto;
+    max-width: 600px;
+
+    .wp-block-media-text__media {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+}
+
+.info-box {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    background: $color__background-info-box;
+}
+
+ul.info-box {
+    list-style-type: none;
+
+    li {
+        padding: .5em 0;
+    }
+}

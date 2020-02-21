@@ -979,6 +979,7 @@ a:hover, a:active {
 }
 .site-main p,
 .site-main iframe,
+.site-main ul,
 .site-main .wp-block-media-text {
   width: 100%;
   max-width: 900px;
@@ -1015,6 +1016,19 @@ a:hover, a:active {
 .ilona-person .wp-block-media-text__media {
   max-width: 300px;
   margin: 0 auto;
+}
+
+.info-box {
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  background: #e3e89b;
+}
+
+ul.info-box {
+  list-style-type: none;
+}
+ul.info-box li {
+  padding: 0.5em 0;
 }
 
 /*--------------------------------------------------------------
