@@ -15,6 +15,10 @@
 	p,
 	iframe,
 	.wp-block-media-text {
+		width: 100%;
+		max-width: $max-width__content-inner;
+		margin-left: auto;
+		margin-right: auto;
 		padding: 0 8px;
 	}
 }
