@@ -403,8 +403,8 @@ h1, h2, h3 {
   font-size: 1.5rem;
   font-weight: 600;
   margin: 18px 0;
-  padding: 0.1em 0;
-  line-height: 1;
+  padding: 0.1em 0 0.3em;
+  line-height: 0.9;
   letter-spacing: 0.02em;
   max-width: 260px;
   width: 100%;
