@@ -830,6 +830,10 @@ a:hover, a:active {
     color: white;
     font-weight: 400;
   }
+
+  .current_page_item {
+    text-decoration: underline;
+  }
 }
 .site-main .comment-navigation,
 .site-main .posts-navigation,
