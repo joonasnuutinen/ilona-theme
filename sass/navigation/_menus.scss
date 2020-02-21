@@ -1,6 +1,15 @@
 .main-navigation {
 	min-height: $height__main-navigation;
 	background: $color__background-navigation;
+	position: relative;
+
+	.entry-title {
+		border: none;
+		background: transparent;
+		color: white;
+		text-align: center;
+		max-width: none;
+	}
 
 	& > div {
 		display: none;
@@ -87,7 +96,9 @@
 }
 
 .menu-toggle {
-	float: right;
+	position: absolute;
+	top: 0;
+	right: 0;
 	height: $height__main-navigation;
 	color: white;
 	border: none;
@@ -108,6 +119,10 @@
 		display: none;
 	}
 	.main-navigation {
+		
+		.entry-title {
+			display: none;
+		}
 
 		& > div {
 			display: block!important;

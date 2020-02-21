@@ -727,6 +727,14 @@ a:hover, a:active {
 .main-navigation {
   min-height: 64px;
   background: #b4cc04;
+  position: relative;
+}
+.main-navigation .entry-title {
+  border: none;
+  background: transparent;
+  color: white;
+  text-align: center;
+  max-width: none;
 }
 .main-navigation > div {
   display: none;
@@ -782,7 +790,9 @@ a:hover, a:active {
 }
 
 .menu-toggle {
-  float: right;
+  position: absolute;
+  top: 0;
+  right: 0;
   height: 64px;
   color: white;
   border: none;
@@ -802,6 +812,9 @@ a:hover, a:active {
     display: none;
   }
 
+  .main-navigation .entry-title {
+    display: none;
+  }
   .main-navigation > div {
     display: block !important;
     margin: 0 auto;
