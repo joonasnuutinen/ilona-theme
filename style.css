@@ -735,6 +735,9 @@ a:hover, a:active {
   color: white;
   text-align: center;
   max-width: none;
+  padding: 24px 0 0;
+  margin: 0;
+  font-weight: 400;
 }
 .main-navigation > div {
   display: none;
