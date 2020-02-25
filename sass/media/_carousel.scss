@@ -1,5 +1,6 @@
 .carousel-indicators {
-    margin-bottom: 21px;
+    display: none;
+    margin: 0 56px 21px;
 
     li {
         width: 9px;
@@ -41,9 +42,15 @@
     background-image: url('media/right.svg');
 }
 
-@media screen and (min-width: $breakpoint__small-nav) {
+@media screen and (min-width: $breakpoint__md-carousel) {
     .carousel-indicators {
-        margin-bottom: 35px;
+        display: flex;
+    }
+}
+
+@media screen and (min-width: $breakpoint__lg-carousel) {
+    .carousel-indicators {
+        margin-bottom: 13px;
         
         li {
             $size: 23px;
@@ -55,9 +62,18 @@
             margin-right: $margin;
         }
     }
-    
+    /*
     .carousel-control-next,
     .carousel-control-prev {
-        padding: 30px;
+        padding-bottom: 30px;
     }
+
+    .carousel-control-next {
+        padding-left: 30px;
+    }
+
+    .carousel-control-prev {
+        padding-right: 30px;
+    }
+    */
 }

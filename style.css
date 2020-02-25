@@ -1169,7 +1169,8 @@ object {
 ## Carousel
 --------------------------------------------------------------*/
 .carousel-indicators {
-  margin-bottom: 21px;
+  display: none;
+  margin: 0 56px 21px;
 }
 .carousel-indicators li {
   width: 9px;
@@ -1208,9 +1209,14 @@ object {
   background-image: url("media/right.svg");
 }
 
-@media screen and (min-width: 520px) {
+@media screen and (min-width: 512px) {
   .carousel-indicators {
-    margin-bottom: 35px;
+    display: flex;
+  }
+}
+@media screen and (min-width: 932px) {
+  .carousel-indicators {
+    margin-bottom: 13px;
   }
   .carousel-indicators li {
     width: 23px;
@@ -1220,10 +1226,20 @@ object {
     margin-right: 5px;
   }
 
+  /*
   .carousel-control-next,
-.carousel-control-prev {
-    padding: 30px;
+  .carousel-control-prev {
+      padding-bottom: 30px;
   }
+
+  .carousel-control-next {
+      padding-left: 30px;
+  }
+
+  .carousel-control-prev {
+      padding-right: 30px;
+  }
+  */
 }
 /*--------------------------------------------------------------
 # Social
