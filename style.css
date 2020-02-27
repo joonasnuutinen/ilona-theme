@@ -503,7 +503,7 @@ hr {
 }
 
 ul, ol {
-  margin: 0 0 9px 3em;
+  margin: 0 0 13.2px 3em;
 }
 
 ul {
@@ -1048,6 +1048,7 @@ ul.info-box {
   padding-top: 9px;
   padding-bottom: 0.5em;
   background: #e3e89b;
+  margin: 13px auto 22px;
 }
 ul.info-box li {
   padding: 9px 0;
