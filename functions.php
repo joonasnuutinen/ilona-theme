@@ -120,13 +120,13 @@ add_action( 'widgets_init', 'ilona_widgets_init' );
  * Enqueue scripts and styles.
  */
 function ilona_scripts() {
-	$v = '20200227-1';
+	$v = '20200303-0';
 
-	wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css', array(), null );
+	wp_enqueue_style( 'bootstrap-css', 'https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css', array(), null );
 
 	wp_enqueue_style( 'fontawesome', 'https://use.fontawesome.com/releases/v5.7.1/css/all.css', array(), null );
 
-	wp_enqueue_style( 'crimson-text', 'https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i', array(), null );
+	wp_enqueue_style( 'crimson-text', 'https://fonts.googleapis.com/css?family=Crimson+Pro:400,400i,600,600i,700,700i&display=swap', array(), null );
 
 	wp_enqueue_style( 'ilona-style', get_stylesheet_uri(), array(), $v );
 
@@ -151,7 +151,7 @@ add_action( 'wp_enqueue_scripts', 'ilona_scripts' );
 // Add style attributes
 function add_style_attributes( $html, $handle ) {
 	$integrity = array(
-		'bootstrap-css' => 'sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS',
+		'bootstrap-css' => 'sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh',
 		'fontawesome' => 'sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr',
 	);
 	

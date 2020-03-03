@@ -386,7 +386,7 @@ select,
 optgroup,
 textarea {
   color: #404040;
-  font-family: "Crimson Text", serif;
+  font-family: "Crimson Pro", serif;
   font-size: 17.6px;
   font-size: 1.1rem;
   line-height: 1.5;
@@ -815,6 +815,10 @@ a:hover, a:active {
     display: none;
   }
 
+  .main-navigation {
+    color: white;
+    font-weight: 400;
+  }
   .main-navigation .entry-title {
     display: none;
   }
@@ -843,12 +847,14 @@ a:hover, a:active {
     margin-left: 2px;*/
   }
   .main-navigation a {
-    color: white;
-    font-weight: 400;
+    color: inherit;
+    font-weight: inherit;
   }
 
   .current_page_item {
     text-decoration: underline;
+    /** Set underline thickness for Firefox and Safari */
+    text-decoration-thickness: 2px;
   }
 }
 .site-main .comment-navigation,

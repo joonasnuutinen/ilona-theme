@@ -122,6 +122,8 @@
 		display: none;
 	}
 	.main-navigation {
+		color: white;
+		font-weight: 400;
 		
 		.entry-title {
 			display: none;
@@ -157,13 +159,15 @@
 		}
 
 		a {
-			color: white;
-			font-weight: 400;
+			color: inherit;
+			font-weight: inherit;
 		}
 	}
 
 	.current_page_item {
 		text-decoration: underline;
+		/** Set underline thickness for Firefox and Safari */
+		text-decoration-thickness: 2px;
 	}
 }
 
