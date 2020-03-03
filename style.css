@@ -736,7 +736,7 @@ a:hover, a:active {
   text-align: center;
   max-width: none;
   padding: 24px 0 0;
-  margin: 0;
+  margin: 0 0 19px;
   font-weight: 400;
 }
 .main-navigation > div {
