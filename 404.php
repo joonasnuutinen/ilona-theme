@@ -14,11 +14,9 @@ get_header();
 		<main id="main" class="site-main">
 
 			<section class="error-404 not-found">
-				<header class="page-header">
-					<h1 class="page-title h2">Sivua ei löydy</h1>
-				</header><!-- .page-header -->
+				<div class="entry-content">
+					<h1 class="page-title">Sivua ei löydy</h1>
 
-				<div class="page-content">
 					<p>Etsimääsi sivua ei löydy.</p>
 
 					<p><a rel="home" href="<?php echo esc_url( home_url( '/' ) ); ?>">Siirry etusivulle</a></p>

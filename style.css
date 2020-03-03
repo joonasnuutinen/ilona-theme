@@ -411,11 +411,7 @@ h1, h2, h3 {
   display: inline-block;
 }
 
-h1 {
-  border-color: #ffe900;
-  background: #ffe900;
-}
-
+h1,
 h2 {
   border-color: #ffe900;
 }
@@ -1018,7 +1014,6 @@ a:hover, a:active {
   display: none;
 }
 
-.page-content,
 .entry-summary {
   margin: 1.5em 0 0;
 }
@@ -1026,7 +1021,7 @@ a:hover, a:active {
 .entry-content {
   margin: 0;
 }
-.entry-content > p:first-child, .entry-content > h2:first-child,
+.entry-content > p:first-child, .entry-content > h1:first-child, .entry-content > h2:first-child,
 .entry-content .carousel + p,
 .entry-content .carousel + h2 {
   margin-top: 44.4px;

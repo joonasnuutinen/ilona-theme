@@ -28,7 +28,6 @@
 	display: none;
 }
 
-.page-content,
 .entry-summary {
 	margin: 1.5em 0 0;
 }
@@ -37,6 +36,7 @@
 	margin: 0;
 
 	& > p:first-child,
+	& > h1:first-child,
 	& > h2:first-child,
 	.carousel + p,
 	.carousel + h2 {
