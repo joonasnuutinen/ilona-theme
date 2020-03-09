@@ -599,6 +599,7 @@ textarea {
   border: 1px solid #ccc;
   border-radius: 3px;
   padding: 3px;
+  width: 100%;
 }
 input[type=text]:focus,
 input[type=email]:focus,
@@ -623,8 +624,31 @@ select {
   border: 1px solid #ccc;
 }
 
-textarea {
-  width: 100%;
+div.wpcf7 {
+  margin: 0 8px 18px;
+}
+div.wpcf7 p {
+  padding-left: 0;
+  padding-right: 0;
+}
+div.wpcf7 .ajax-loader {
+  margin: 5px 0;
+}
+
+.ilona-form-submitter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+}
+
+div.wpcf7-response-output {
+  margin: 0 auto;
+  max-width: 335px;
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
 }
 
 /*--------------------------------------------------------------
